@@ -31,5 +31,45 @@
       <label for="pwd">Password:</label>
       <input type="password" placeholder="password" id="pwd" />
     </p>
+    <h3>Google search submission</h3>
+    <form action="https://www.google.com/search">
+      <input type="text" placeholder="search" name="q" />
+      <button>Search</button>
+    </form>
+    <h3>Youtube video search</h3>
+    <form action="https://www.youtube.com/results">
+      <input type="text" placeholder="search" name="search_query" />
+      <button>Search for Youtube video</button>
+    </form>
+
+    <form action="/content">
+      <label for="eighteen">I am 18+</label>
+      <input type="checkbox" name="eighteen" value="age" checked />
+      <button type="submit">Submit</button>
+    </form>
+
+    <form action="/lgbt">
+      <p>Select your gender</p>
+      <input type="radio" name="gender" value="male" id="male" />
+      <label for="male">Male</label>
+      <input type="radio" name="gender" value="female" id="female" />
+      <label for="female">Female</label>
+      <input type="radio" name="gender" value="gay" id="gay" />
+      <label for="gay">Gay</label>
+      <input type="radio" name="gender" value="lesbian" id="lesbian" />
+      <label for="lesbian">Lesbian</label><br />
+      <button type="submit">Submit gender</button>
+    </form>
+
+    <form action="/home/details">
+      <label for="cities">Select city you belong to:</label>
+      <select name="cities" id="cities">
+        <option value="">--select city--</option>
+        <option value="chennai">Chennai</option>
+        <option value="bangalore" selected>Bangalore</option>
+        <option value="hyderabad">Hyderabad</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>
