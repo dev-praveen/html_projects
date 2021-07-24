@@ -9,15 +9,22 @@
   <body>
     <p>
       <label for="fname">Enter first name:</label>
-      <input type="text" placeholder="first name" id="fname" />
+      <input
+        type="text"
+        placeholder="first name"
+        id="fname"
+        required
+        minlength="3"
+        maxlength="10"
+      />
     </p>
     <p>
-      <label for="lname">Enter first name:</label>
+      <label for="lname">Enter last name:</label>
       <input type="text" placeholder="last name" id="lname" />
     </p>
     <p>
       <label for="age">Enter age:</label>
-      <input type="number" placeholder="age" id="age" />
+      <input type="number" placeholder="age" id="age" min="15" max="35" />
     </p>
     <p>
       <label for="gender">Gender:</label>
@@ -69,6 +76,31 @@
         <option value="bangalore" selected>Bangalore</option>
         <option value="hyderabad">Hyderabad</option>
       </select>
+
+      <div>
+        <label for="volume">Play with volume:</label>
+        <input
+          type="range"
+          name="volume"
+          id="volume"
+          value="30"
+          min="1"
+          max="100"
+          step="5"
+        />
+      </div>
+      <div>
+        <label for="feedback">Enter the feedback or leave your comments:</label
+        ><br />
+        <textarea
+          name="feedback"
+          id="feedback"
+          cols="30"
+          rows="10"
+          placeholder="Start here..."
+        >
+        </textarea>
+      </div>
       <button type="submit">Submit</button>
     </form>
   </body>
