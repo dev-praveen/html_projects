@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Application Form</title>
+  </head>
+  <body>
+    <form action="/java/rest/api" method="GET">
+      <h2>Application For Permission To Date My Daughter</h2>
+      <p>
+        <strong>Note:</strong> Form is to be completed at least 21 days prior to
+        date
+      </p>
+      <h3>Personal Details</h3>
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Enter name here"
+      /><br /><br />
+      <label for="address">Address:</label>
+      <input
+        type="text"
+        name="address"
+        id="address"
+        placeholder="Enter address here"
+      /><br /><br />
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Enter email here"
+      /><br /><br />
+      <label for="phone">Phone Number:</label>
+      <input
+        type="tel"
+        name="phone"
+        id="phone"
+        placeholder="Enter 10 digit number"
+      /><br /><br />
+      <label for="iq">IQ:</label>
+      <input type="text" name="iq" id="iq" placeholder="Enter IQ here" />
+      <div>
+        <p>Gender</p>
+        <input type="radio" name="male" id="male" value="Male" />
+        <label for="male">Male</label><br />
+        <input type="radio" name="female" id="female" value="Female" />
+        <label for="female">Female</label><br />
+        <input type="radio" name="other" id="other" value="Other" />
+        <label for="other">Other</label>
+      </div>
+      <br />
+      <label for="passout">Date of Proposed Outing:</label>
+      <input type="date" name="passout" id="passout" />
+      <div>
+        <p>Check All That Apply</p>
+        <input
+          type="checkbox"
+          name="tatto"
+          id="tatto"
+          value="I have tattoos and/or piercings"
+        />
+        <label for="tatto">I have tattoos and/or piercings</label><br />
+        <input
+          type="checkbox"
+          name="daughter"
+          id="daughter"
+          value="I am more than 2 years older than my daughter"
+        />
+        <label for="daughter"
+          >I am more than 2 years older than my daughter</label
+        ><br />
+        <input
+          type="checkbox"
+          name="V8"
+          id="V8"
+          value="I own a panel van or V8 ute"
+        />
+        <label for="V8">I own a panel van or V8 ute</label><br />
+        <input
+          type="checkbox"
+          name="full-time"
+          id="full-time"
+          value="I work full-time"
+          checked
+        />
+        <label for="full-time">I work full-time</label><br />
+        <input
+          type="checkbox"
+          name="rich"
+          id="rich"
+          value="My parents are rich"
+          checked
+        />
+        <label for="rich">My parents are rich</label><br />
+        <input
+          type="checkbox"
+          name="location"
+          id="location"
+          value="Is the date at a well lit public location"
+          checked
+        />
+        <label for="location">Is the date at a well lit public location</label>
+      </div>
+      <br />
+      <div>
+        Political Persuasion:
+        <select name="political" id="political">
+          <option value="Left Wing">Left Wing</option>
+          <option value="Right Wing">Right Wing</option>
+          <option value="Conservative">Conservative</option>
+          <option value="Nazi">Nazi</option>
+          <option value="None" selected>None</option>
+        </select>
+        Education Level Completed:
+        <select name="education" id="education">
+          <option value="University">University</option>
+          <option value="College">College</option>
+          <option value="High scholl">High scholl</option>
+          <option value="None" selected>None</option>
+        </select>
+      </div>
+      <h3>Essay Section</h3>
+      <label for="date_reason"
+        >In 50 words or more explain why you want to date my daughter</label
+      ><br /><br />
+      <textarea
+        name="date_reason"
+        id="date_reason"
+        cols="40"
+        rows="8"
+        placeholder="Enter Text Here"
+      ></textarea
+      ><br /><br />
+      <div>
+        <label for="contact_details"
+          >Please upload contact details for 2 references</label
+        ><br /><br />
+        <textarea
+          name="contact_details"
+          id="contact_details"
+          cols="40"
+          rows="8"
+          placeholder="Enter Text Here"
+        ></textarea>
+      </div>
+      <br />
+      <label for="file_attach"
+        >Upload Police Clearance Certificate, Bank Statement and Medical
+        Certifiates here:
+      </label>
+      <input type="file" name="file_attach" id="file_attach" /><br /><br />
+      <button type="submit">Send Your Application</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>
