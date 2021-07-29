@@ -1,0 +1,13 @@
+h2,
+h3 {
+  background-color: #283618;
+  color: #ffd60a;
+}
+
+#file_attach {
+  color: chocolate;
+}
+
+button:hover {
+  background-color: darkorange;
+}
