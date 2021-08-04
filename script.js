@@ -106,6 +106,17 @@ const tipTobePaid = (billValue >= 15 && billValue <= 300) ? 15 : 20
 const tipValue = billValue*(tipTobePaid/100)
 console.log(billValue+tipValue)
 
+const bills = [125, 555, 44]
+
+const finalTip = function(bill){
+
+    return (bill >= 15 && bill <= 300) ? bill*0.15 : bill*0.2
+}
+
+const tips = [finalTip(bills[0]), finalTip(bills[1]), finalTip(bills[2])]
+const totalBillWithTips = [bills[0]+tips[0], bills[1]+tips[1], bills[2]+tips[2]]
+console.log('totalBillWithTips '+totalBillWithTips);
+
 
 function calcRectArea(width, height){
 
@@ -129,5 +140,71 @@ const getAge = (birthYear) => {
 
 
 console.log('Get age '+getAge(1998))
+
+const greet = (name) => {
+    console.log(name)
+    return 'Hi '+name+' Good Morning!'
+}
+console.log(greet('praveen'));
+
+const yearsUntilRetirement = (birthYear, firstName) => {
+
+    const calCurrentAge = 2030-birthYear
+    const retireAge = 65 - calCurrentAge
+
+    return `${firstName} retires in ${retireAge} years`
+}
+
+console.log(yearsUntilRetirement(1991, 'praveen'));
+console.log(yearsUntilRetirement(1985, 'kelly'));
+
+const calcAverage = (a, b, c) => (a+b+c)/3
+
+function checkWinner(avgDolphins, avgKoalas){
+
+    console.log(avgDolphins, avgKoalas)
+    if(avgDolphins >= avgKoalas*2) console.log(`avgDolphins won (${avgDolphins} vs ${avgKoalas})`)
+    else if(avgKoalas >= avgDolphins*2) console.log(`avgKoalas won (${avgKoalas} vs ${avgDolphins})`)
+    else console.log('No team has won');
+}
+
+const avgDolphins = calcAverage(44, 23, 71)
+const avgKoalas = calcAverage(65, 54, 49)
+
+// const avgDolphins = calcAverage(85, 54, 41)
+// const avgKoalas = calcAverage(23, 34, 27)
+
+checkWinner(avgDolphins, avgKoalas)
+
+const friends = new Array('rams', 'sudeepth', 'laddu', 'kiran')
+console.log(friends);
+console.log(friends.length);
+
+const years = [1990, 1991, 1992, 1993]
+years[4] = 1994
+console.log(years);
+years[2] = 1981
+console.log(years);
+console.log(years[3])
+
+const myProps = ['praveen', 'sana', 2030-1991, friends]
+console.log(myProps);
+
+const newLength = friends.push('paramesh')
+console.log(newLength, friends);
+
+
+const reverseString = ipText => {
+
+    let newStirng = ''
+    for(let i=ipText.length-1; i >=0; i--){
+
+        newStirng+=ipText[i]
+    }
+    return newStirng
+}
+
+console.log(reverseString('praveen'));
+
 
 
