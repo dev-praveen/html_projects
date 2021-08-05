@@ -206,5 +206,34 @@ const reverseString = ipText => {
 
 console.log(reverseString('praveen'));
 
+const myObject = {
+
+    firstName:'Praveen',
+    lastName: 'Sana',
+    age: 2021-1991,
+    profession: 'Software Developer',
+    company: 'Societe Generale',
+    collegues: ['soji', 'don', 'ajith', 'vittal']
+}
+
+console.log(myObject);
+
+console.log('Age: '+myObject.age)
+console.log('My buddy in team '+myObject.collegues[3])
+
+myObject.twiiterHandle = '@praveensana'
+
+console.log(myObject);
+
+const inputQuestion = prompt('What do you want from me as an object')
+
+if(myObject[inputQuestion]){
+    console.log(myObject[inputQuestion])
+}
+else{
+    console.log('No property found with the entered value, please enter correct property');
+}
+
+
 
 
