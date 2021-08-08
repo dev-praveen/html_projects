@@ -28,6 +28,29 @@ function markHigherBMI(bmi1, bmi2){
 const bmiFlag = markHigherBMI(marksBMI, johnsBMI)
 console.log(bmiFlag)
 
+const marksObject = {
+
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69
+}
+
+const johnsObject = {
+
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95
+}
+
+const calBMI = () => {
+
+    const bmi = johnsObject.mass/((johnsObject.height)**2)
+    console.log('=========BMI========== ', bmi)
+    return bmi
+}
+
+console.log(calBMI());
+
 const age = 19
 const isOldEnough = age >= 19
 
@@ -213,10 +236,24 @@ const myObject = {
     age: 2021-1991,
     profession: 'Software Developer',
     company: 'Societe Generale',
-    collegues: ['soji', 'don', 'ajith', 'vittal']
+    collegues: ['soji', 'don', 'ajith', 'vittal'],
+    hasDrivingLicense: false,
+
+    salary: (gross, pf, tax) => {
+        return gross-pf-tax
+    },
+
+    eligibleForDate: function(){
+        this.dateAge = this.age > 19 ? true: false
+        return this.dateAge
+    }
+
+
 }
 
 console.log(myObject);
+console.log(myObject.eligibleForDate()+' =====================eligibledate====================');
+console.log(myObject.dateAge+' =====================eligibledate====================');
 
 console.log('Age: '+myObject.age)
 console.log('My buddy in team '+myObject.collegues[3])
@@ -225,14 +262,21 @@ myObject.twiiterHandle = '@praveensana'
 
 console.log(myObject);
 
-const inputQuestion = prompt('What do you want from me as an object')
+// const inputQuestion = prompt('What do you want from me as an object')
 
-if(myObject[inputQuestion]){
-    console.log(myObject[inputQuestion])
-}
-else{
-    console.log('No property found with the entered value, please enter correct property');
-}
+// if(myObject[inputQuestion]){
+//     console.log(myObject[inputQuestion])
+// }
+// else{
+//     console.log('No property found with the entered value, please enter correct property');
+// }
+
+console.log('My Net salary: '+myObject.salary(75000, 4500, 2300))
+
+const license = () =>  myObject.hasDrivingLicense ? 'a' : 'no'
+
+console.log(`${myObject.firstName} is a ${myObject.age} years old and he has ${license()} driving license`);
+
 
 
 
