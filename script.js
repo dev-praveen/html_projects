@@ -278,6 +278,43 @@ const license = () =>  myObject.hasDrivingLicense ? 'a' : 'no'
 console.log(`${myObject.firstName} is a ${myObject.age} years old and he has ${license()} driving license`);
 
 
+function calAvg(arr){
+
+    let sum = 0
+    for(let i=0; i<arr.length; i++){
+        sum= sum+arr[i]
+    }
+    return sum/arr.length
+}
+
+console.log(calAvg([6, 3, 1]));
+
+const convertKelvin = function(){
+
+    const measurement = {
+        type:'temp',
+        units:'celsius',
+        value:prompt('Enter degrees celsius: ')
+    }
+
+    const kelvin = measurement.value + 273
+    return kelvin
+}
+
+console.log('converted temperature '+convertKelvin());
+
+const printForecast = (arr) => {
+
+    let output = ''
+    for(let i=0; i<arr.length; i++){
+        output = output+` ... ${arr[i]}^c in ${i+1} days `
+    }
+    
+    return output
+}
+
+console.log(printForecast([17, 21, 23]))
+console.log(printForecast([12, 5, -5, 0, 4]))
 
 
 
